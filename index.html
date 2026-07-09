@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Turner | Portfolio</title>
+    <meta name="description" content="A simple portfolio website starter for GitHub Pages." />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --accent-2: #818cf8;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #1e293b);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .container {
+        width: min(1100px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 1.2rem 0;
+        position: sticky;
+        top: 0;
+        background: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(8px);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+        color: var(--muted);
+      }
+
+      .hero {
+        padding: 5rem 0 3rem;
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        margin: 0 0 1rem;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        max-width: 650px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: white;
+      }
+
+      .btn-secondary {
+        border: 1px solid #334155;
+        color: var(--text);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid #1f2937;
+        border-radius: 18px;
+        padding: 1.25rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      }
+
+      section {
+        padding: 2rem 0;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-list {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project {
+        padding: 1rem;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid #243244;
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 700px) {
+        .grid,
+        .project-list {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="brand">Your Name</a>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p style="text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent);">Developer • Designer • Builder</p>
+          <h1>I build clean, modern web experiences.</h1>
+          <p>
+            Welcome to my portfolio. I’m a creative developer who enjoys crafting thoughtful digital products,
+            simple interfaces, and useful experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="grid">
+          <div class="card">
+            <h2>About Me</h2>
+            <p>
+              Replace this section with a short bio about your background, skills, and what you care about.
+              This starter is already GitHub Pages ready.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Skills</h2>
+            <p>HTML • CSS • JavaScript • React • Git • UI Design</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-list">
+          <div class="project">
+            <h3>Project One</h3>
+            <p>Describe a project, your role, and what you built.</p>
+          </div>
+          <div class="project">
+            <h3>Project Two</h3>
+            <p>Describe another project and the impact it had.</p>
+          </div>
+          <div class="project">
+            <h3>Project Three</h3>
+            <p>Show off a portfolio piece or client work.</p>
+          </div>
+          <div class="project">
+            <h3>Project Four</h3>
+            <p>Add a link to GitHub, a live demo, or case study.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h2>Contact</h2>
+          <p>Email: yourname@example.com</p>
+          <p>GitHub: <a href="https://github.com" style="color: var(--accent);">github.com/yourname</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">Built with simple HTML for GitHub Pages.</div>
+    </footer>
+  </body>
+</html>
